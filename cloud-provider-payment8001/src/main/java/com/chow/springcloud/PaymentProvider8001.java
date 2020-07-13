@@ -2,12 +2,14 @@ package com.chow.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-public class CloudConsumerOrder80 {
+@EnableEurekaClient
+public class PaymentProvider8001 {
 
     public static void main(String[] args) {
-        SpringApplication.run(CloudConsumerOrder80.class);
+        SpringApplication.run(PaymentProvider8001.class);
     }
 
 }
