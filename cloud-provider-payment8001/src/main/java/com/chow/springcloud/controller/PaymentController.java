@@ -1,6 +1,5 @@
 package com.chow.springcloud.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.chow.springcloud.entities.CommonResult;
 import com.chow.springcloud.entities.Payment;
 import com.chow.springcloud.service.PaymentService;
@@ -60,7 +59,7 @@ public class PaymentController {
                 log.info(instance.getServiceId() + "\t" + instance.getHost() + "\t" + instance.getPort() + "\t" + instance.getUri());
             }
         }
-        return JSON.toJSONString(instances);
+        return this.discoveryClient;
     }
 
 }
