@@ -25,11 +25,13 @@ public class OrderController {
 
     @GetMapping("/consumer/payment/create")
     public CommonResult create(@RequestBody Payment payment) {
-        return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);  //写操作
+//        return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);  //写操作
+        return new CommonResult<>(200, null, "hh");
     }
 
-    @GetMapping("/consumer/payment/get/{id}")
+    @GetMapping("/consumer2/payment/get/{id}")
     public CommonResult getPayment(@PathVariable("id") Long id) {
-        return restTemplate.postForObject(PAYMENT_URL + "/payment/get/" + id, null, CommonResult.class);
+//        return restTemplate.postForObject(PAYMENT_URL + "/payment/get/" + id, null, CommonResult.class);
+        return new CommonResult<>(200, null, id);
     }
 }
